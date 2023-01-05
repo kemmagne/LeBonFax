@@ -31,7 +31,7 @@
 
         <label for=""><h1>Product Freshness</h1></label>
         <mat-radio-group fromControlName="freshness" class="example-radio-group">
-        <mat-radio-button class="example-radio-button"> </mat-radio-button>
+        <mat-radio-button class="example-radio-button" *ngFor="let fresh of freshnessList" [value]="fresh">{{ fresh }} </mat-radio-button>
         </mat-radio-group>
 
         <mat-form-field appearance="outline">

@@ -12,7 +12,9 @@ import { MatDialogRef, MAT_DIALOG_DATA }  from '@angular/material/dialog';
 export class DialogComponent {
     
   productForm! : FormGroup;
-  actionBtn: string = "save"
+  actionBtn: string = "save";
+
+  freshnessList = ['Brand New', 'Second Hand', 'Refurbished']
 
   constructor(private formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public editData: any,
     

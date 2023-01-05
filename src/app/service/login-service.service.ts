@@ -21,7 +21,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   getUsers():  Observable<User[]> {
-    return this.http.get<User[]>(this.baseURL+`user/read.php`)
+    return this.http.get<User[]>(this.baseURL)
     .pipe(
       catchError(this.handleError)
     )

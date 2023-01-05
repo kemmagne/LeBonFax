@@ -24,8 +24,9 @@ export class LoginComponent {
      
     })
     this.loginService.getUsers().subscribe((data: any)=>{
-      console.log(data.json());
-      this.users = data.json();
+      console.log(data);
+      this.users = data;
+    
     });
   }
 
@@ -33,7 +34,9 @@ export class LoginComponent {
     console.log(data)
     if(data.email){
       this.users.forEach((item:any) => {
-        if(item.name === data.email && item.password === data.password){
+        console.log(item.email);
+        console.log(data.email);
+        if(item.email === data.email && item.password === data.password){
           localStorage.setItem("isLoggedIn","true");
           this.router.navigate(['home']);
         }
